@@ -6,7 +6,7 @@ const userModel = mongoose.model("user");
 
 let adminUser = {
 	"_id": "admin",
-	"username": "Admin",
+	"name": "Admin",
 	"email": "admin@smileworks.com",
 	"password": "123123123",
 	"salt": null

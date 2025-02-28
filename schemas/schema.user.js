@@ -2,10 +2,9 @@ const schema = require('mongoose').Schema;
 
 const definition = {
 	"_id": String,
-	"username": String,
+	"name": String,
 	"password": String,
 	"salt": String,
-	"name": String,
 	"email": String,
 	"phoneNumber": String,
 	"address": {
