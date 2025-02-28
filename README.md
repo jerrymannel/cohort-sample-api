@@ -33,13 +33,13 @@ Sample Express APP for DSD Cohort
 
 | Branch | Description |
 |--------|-------------|
-| `main` | All integrated |
-| `01-api` | Express API |
-| `02-docker` | Docker builds |
-| `03-db` | Building APIs on top of MongoDB |
-| `04-auth` | Adding JWT authentication to the API |
-| `05-logging` | Adding Pino logging to the app |
-| `06-init` | Initialization of the app with a default user |
+| [`main`](https://github.com/jerrymannel/cohort-sample-api) | All integrated |
+| [`01-api`](https://github.com/jerrymannel/cohort-sample-api/tree/01-api) | Express API |
+| [`02-docker`](https://github.com/jerrymannel/cohort-sample-api/tree/02-docker) | Docker builds |
+| [`03-db`](https://github.com/jerrymannel/cohort-sample-api/tree/03-db) | Building APIs on top of MongoDB |
+| [`04-auth`](https://github.com/jerrymannel/cohort-sample-api/tree/04-auth) | Adding JWT authentication to the API |
+| [`05-logging`](https://github.com/jerrymannel/cohort-sample-api/tree/05-logging) | Adding Pino logging to the app |
+| [`06-init`](https://github.com/jerrymannel/cohort-sample-api/tree/06-init) | Initialization of the app with a default user |
 
 # Setup
 
