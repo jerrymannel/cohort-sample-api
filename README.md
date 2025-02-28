@@ -9,6 +9,8 @@ Sample Express APP for DSD Cohort
 | `01-api` | Express API |
 | `02-docker` | Docker builds |
 | `03-db` | Building APIs on top of MongoDB |
+| `04-auth` | Adding JWT authentication to the API |
+| `05-logging` | Adding Pino logging to the app |
 
 # Setup
 
@@ -69,3 +71,40 @@ npm install jsonwebtoken
 - Add ignore paths to the middleware - `init.js`
 - Define a middleware to verify the token - `lib/middleware.auth.js`
 - Use the middleware to protect the routes - `app.js`
+
+## Branch `05-logging`
+
+### Install dependencies
+
+```sh
+npm install pino
+npm install --save-dev pino-pretty
+```
+
+### Objectives
+
+- Define a logger - `init.js`
+- Use the logger in the app - `app.js`
+- Added an API logger middleware - `lib/middleware.apiLogger.js`
+- Use the logger in the routes - `routes/router.greet.js`
+- Use the logger in the routes - `routes/router.user.js`
+- Use the logger in the routes - `routes/router.auth.js`
+- Use the logger in the middleware - `lib/middleware.auth.js`
+
+### Run the app with logging
+
+#### Linux / MacOS
+
+```sh
+LOG_LEVEL=trace node app.js | npx pino-pretty
+```
+
+#### Windows
+
+```sh
+set LOG_LEVEL=trace && node app.js | npx pino-pretty
+```
+> Please check the windows command. I'm not sure if it's correct.
+
+
+
