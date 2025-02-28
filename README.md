@@ -32,7 +32,14 @@ npm install express
 - Create a simple route to greet a user - `routes/router.greet.js`
 - How to initialize the env variables - `init.js`
 
-## Branch `02-db`
+## Branch `02-docker`
+
+### Objectives
+
+- Create a Dockerfile
+- Build a Docker image
+
+## Branch `03-db`
 
 ### Install dependencies
 
@@ -46,3 +53,19 @@ npm install mongoose-express-middleware
 - Create a schema for the user - `schemas/schema.user.js`
 - Create a simple route manage users - `routes/router.user.js`
 
+
+## Branch `04-auth`
+
+### Install dependencies
+
+```sh
+npm install jsonwebtoken
+```
+
+### Objectives
+
+- Defining JWT secret and token expiration - `init.js`
+- Create a simple route to authenticate a user - `routes/router.auth.js`
+- Add ignore paths to the middleware - `init.js`
+- Define a middleware to verify the token - `lib/middleware.auth.js`
+- Use the middleware to protect the routes - `app.js`

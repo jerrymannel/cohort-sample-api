@@ -19,7 +19,17 @@ async function connectToMongoDB() {
 	}
 }
 
+const JWT_SECRET = process.env.JWT_SECRET || '123123123';
+const JWT_EXPIRATION = process.env.JWT_EXPIRATION || '1h';
+
+const apiIgnorePaths = ['/api/auth/login'];
+
 module.exports = {
 	PORT,
 	connectToMongoDB,
+	jwt: {
+		secret: JWT_SECRET,
+		expiration: JWT_EXPIRATION,
+	},
+	apiIgnorePaths,
 };
