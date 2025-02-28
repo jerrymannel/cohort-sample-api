@@ -9,7 +9,13 @@ app.use(express.json());
 const greetRouter = require('./routes/router.greet');
 app.use('/api/greet', greetRouter);
 
-app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`);
-});
+const userRouter = require('./routes/router.user');
+app.use('/api/users', userRouter);
+
+(async () => {
+	await init.connectToMongoDB();
+	app.listen(PORT, () => {
+		console.log(`Server is running on port ${PORT}`);
+	});
+})();
 
