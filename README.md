@@ -1,6 +1,34 @@
 # cohort-sample-api
 Sample Express APP for DSD Cohort
 
+# Table of Contents
+
+- [cohort-sample-api](#cohort-sample-api)
+- [Table of Contents](#table-of-contents)
+- [Branch info](#branch-info)
+- [Setup](#setup)
+- [Documentation](#documentation)
+	- [Branch `01-api`](#branch-01-api)
+		- [Install dependencies](#install-dependencies)
+		- [Objectives](#objectives)
+	- [Branch `02-docker`](#branch-02-docker)
+		- [Objectives](#objectives-1)
+	- [Branch `03-db`](#branch-03-db)
+		- [Install dependencies](#install-dependencies-1)
+		- [Objectives](#objectives-2)
+	- [Branch `04-auth`](#branch-04-auth)
+		- [Install dependencies](#install-dependencies-2)
+		- [Objectives](#objectives-3)
+	- [Branch `05-logging`](#branch-05-logging)
+		- [Install dependencies](#install-dependencies-3)
+		- [Objectives](#objectives-4)
+		- [Run the app with logging](#run-the-app-with-logging)
+			- [Linux / MacOS](#linux--macos)
+			- [Windows](#windows)
+	- [Branch `06-init`](#branch-06-init)
+		- [Objectives](#objectives-5)
+
+
 # Branch info
 
 | Branch | Description |
