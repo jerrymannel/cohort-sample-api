@@ -11,12 +11,12 @@ Sample Express APP for DSD Cohort
 | `03-db` | Building APIs on top of MongoDB |
 | `04-auth` | Adding JWT authentication to the API |
 | `05-logging` | Adding Pino logging to the app |
+| `06-init` | Initialization of the app with a default user |
 
 # Setup
 
 1. Install dependencies: `npm install`
-2. Start the server: `npm start`
-3. Access the API at `http://localhost:3000`
+2. Access the API at `http://localhost:3000`
 
 # Documentation
 
@@ -106,5 +106,10 @@ set LOG_LEVEL=trace && node app.js | npx pino-pretty
 ```
 > Please check the windows command. I'm not sure if it's correct.
 
+## Branch `06-init`
 
+### Objectives
 
+- Create app initialization scripts under `init-scripts` folder
+- Create a default user - `init-scripts/init.user.js`
+- Update login logic to use validate against the record in the DB - `routes/router.auth.js`

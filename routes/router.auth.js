@@ -1,23 +1,33 @@
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+const mongoose = require('mongoose');
 const init = require('../init');
 const logger = init.logger;
 
-// hardcoded credentials
-// username: admin
-// password: 123123123
-router.post('/login', (req, res) => {
+const userModel = mongoose.model('user');
+
+router.post('/login', async (req, res) => {
 	logger.debug(`Login attempt`);
 	try {
 		const { username, password } = req.body;
+		if (!username || !password) {
+			logger.error(`Username or password not provided`);
+			return res.status(400).json({ message: "Invalid credentials" });
+		}
 		logger.trace(`Login attempt with username: ${username} and password: ${password}`);
 
-		if (
-			!username ||
-			!password ||
-			username !== 'admin' ||
-			password !== '123123123'
-		) {
+		const user = await userModel.findOne({ _id: username });
+		logger.trace(`User: ${JSON.stringify(user)}`);
+
+		if (!user) {
+			logger.error(`User not found`);
+			return res.status(400).json({ message: 'Invalid credentials' });
+		}
+
+		logger.trace("User found. Checking password")
+		const hash = crypto.createHash('sha256').update(password + user.salt).digest('hex');
+		if (hash !== user.password) {
 			logger.error(`Invalid credentials`);
 			return res.status(400).json({ message: 'Invalid credentials' });
 		}
