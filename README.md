@@ -27,6 +27,8 @@ Sample Express APP for DSD Cohort
 			- [Windows](#windows)
 	- [Branch `06-init`](#branch-06-init)
 		- [Objectives](#objectives-5)
+	- [Branch `07-workingAPI`](#branch-07-workingapi)
+		- [Objectives](#objectives-6)
 
 
 # Branch info
@@ -40,6 +42,7 @@ Sample Express APP for DSD Cohort
 | [`04-auth`](https://github.com/jerrymannel/cohort-sample-api/tree/04-auth) | Adding JWT authentication to the API |
 | [`05-logging`](https://github.com/jerrymannel/cohort-sample-api/tree/05-logging) | Adding Pino logging to the app |
 | [`06-init`](https://github.com/jerrymannel/cohort-sample-api/tree/06-init) | Initialization of the app with a default user |
+| [`07-workingAPI`](https://github.com/jerrymannel/cohort-sample-api/tree/07-workingAPI) | Working API - Category, Brand, Product |
 
 # Setup
 
@@ -141,3 +144,18 @@ set LOG_LEVEL=trace && node app.js | npx pino-pretty
 - Create app initialization scripts under `init-scripts` folder
 - Create a default user - `init-scripts/init.user.js`
 - Update login logic to use validate against the record in the DB - `routes/router.auth.js`
+
+## Branch `07-workingAPI`
+
+### Objectives
+
+- Category: Schema - `schemas/schema.category.js`
+- Category: CRUD - `routes/router.category.js`
+- Brand: Schema - `schemas/schema.brand.js`
+- Brand: CRUD - `routes/router.brand.js`
+- Product: Schema - `schemas/schema.product.js`
+- Product: CRUD - `routes/router.product.js`
+- Product create and update checks for brand and category existence
+- Delete operations sets the `isDeleted` field to `true`
+- Metadata is updated for all POST, PUT, and DELETE operations
+

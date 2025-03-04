@@ -40,6 +40,12 @@ async function connectToMongoDB() {
 	}
 }
 
+const modelNames = {
+	brand: 'brand',
+	category: 'category',
+	product: 'product',
+}
+
 
 module.exports = {
 	PORT,
@@ -51,4 +57,5 @@ module.exports = {
 	apiIgnorePaths,
 	LOG_LEVEL,
 	logger,
+	modelNames,
 };
