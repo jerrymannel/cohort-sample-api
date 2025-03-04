@@ -159,3 +159,4 @@ set LOG_LEVEL=trace && node app.js | npx pino-pretty
 - Delete operations sets the `isDeleted` field to `true`
 - Metadata is updated for all POST, PUT, and DELETE operations
 
+API Postman Collection: [here](./CohortSample.postman_collection.json)
